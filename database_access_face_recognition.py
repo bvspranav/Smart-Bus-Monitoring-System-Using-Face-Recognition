@@ -40,12 +40,12 @@ print("Student Names:", student_names)
 print("Fee Statuses:", fee_statuses)
 print("Boarding Times:", boarding_times)
 
-workbook.save('student_data.xlsx')
+workbook.save('student_data.xlsx') ## if automatically excel is not created, create an excel sheet manually in the same directory
 
 
 # Google Sheets integration
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name('C:/Users/bvspranav999/OneDrive/Desktop/Face Recognition Project/Real-time-face-recognition-Using-Facenet-main/vit-ap-bus-monitoring-e655725376fc.json', scope)
+creds = ServiceAccountCredentials.from_json_keyfile_name('json file path', scope) ## add json file path
 client = gspread.authorize(creds)
 sheet_name = 'VIT-AP BUS MONITORING SYSTEM'
 sheet = client.open(sheet_name).sheet1
@@ -225,15 +225,15 @@ if __name__ == "__main__":
 
     required_shape = (160, 160)
     face_encoder = InceptionResNetV2()
-    path_m = "C:/Users/bvspranav999/OneDrive/Desktop/Face Recognition Project/Real-time-face-recognition-Using-Facenet-main/facenet_keras_weights.h5"
+    path_m = "add keras.h5 path" ## add keras.h5 file path
     face_encoder.load_weights(path_m)
-    encodings_path = 'C:/Users/bvspranav999/OneDrive/Desktop/Face Recognition Project/Real-time-face-recognition-Using-Facenet-main/encodings.pkl'
+    encodings_path = 'encodings path' ## add your encodings path
     face_detector = mtcnn.MTCNN()
     encoding_dict = load_pickle(encodings_path)
 
-    bot = telepot.Bot('6770297324:AAHD5i6MQEnxj6cfbsziSXDxp0DtMphcL8Q')
+    bot = telepot.Bot('bot') ## add your bot token number 
 
-    chat_id = '1209679496'
+    chat_id = 'id' ## add your specified bot id
     bot.message_loop(handle)
 
     print("Telegram bot is ready")
