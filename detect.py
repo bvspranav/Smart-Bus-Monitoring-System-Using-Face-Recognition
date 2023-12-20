@@ -63,9 +63,9 @@ def detect(img ,detector,encoder,encoding_dict):
 if __name__ == "__main__":
     required_shape = (160,160)
     face_encoder = InceptionResNetV2()
-    path_m = "C:/Users/bvspranav999/OneDrive/Desktop/Face Recognition Project/Real-time-face-recognition-Using-Facenet-main/facenet_keras_weights.h5"
+    path_m = "facenet_keras_weights.h5" ## add path 
     face_encoder.load_weights(path_m)
-    encodings_path = 'C:/Users/bvspranav999/OneDrive/Desktop/Face Recognition Project/Real-time-face-recognition-Using-Facenet-main/encodings.pkl'
+    encodings_path = 'encodings.pkl' ## add path to encodings.pkl
     face_detector = mtcnn.MTCNN()
     encoding_dict = load_pickle(encodings_path)
     
