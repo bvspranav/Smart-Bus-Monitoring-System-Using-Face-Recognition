@@ -2,6 +2,10 @@
 
 This repository contains code for a real-time face recognition system utilizing FaceNet, MTCNN, and Google Sheets integration. The system aims to recognize faces, determine fee payment status, and monitor student boarding times for a school or educational institution's bus monitoring system.
 
+## Abstract
+
+The Real-time Face Recognition Using FaceNet project presents a comprehensive system designed to facilitate efficient monitoring and management of student boarding activities for educational institutions, specifically focusing on bus monitoring systems. Leveraging state-of-the-art facial recognition technology and integrations with Google Sheets and Telegram, this system automates the identification of students, tracks their fee payment statuses, and monitors their boarding times.
+
 ## Project Overview
 The system performs the following key functionalities:
 
@@ -57,3 +61,7 @@ The system will open the camera, detect faces, recognize students, and display n
 Based on recognized faces, fee statuses, and boarding times, the system updates Google Sheets and sends alerts.
 
 Replace placeholders such as YOUR_TELEGRAM_BOT_TOKEN, Maintainer's Name, and email@example.com with appropriate details. Additionally, ensure to include the necessary instructions and prerequisites based on your specific setup and requirements.
+
+
+## Conclusion:
+The Real-time Face Recognition Using FaceNet project offers an efficient and automated solution for monitoring student boarding activities in educational institutions. By integrating advanced face recognition technology with Google Sheets and Telegram, this system streamlines administrative tasks, enhances security measures, and facilitates real-time communication, thereby contributing to improved management of student transportation systems.
