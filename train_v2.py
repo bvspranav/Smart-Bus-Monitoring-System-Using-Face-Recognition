@@ -8,10 +8,10 @@ from sklearn.preprocessing import Normalizer
 from tensorflow.keras.models import load_model
 
 ######pathsandvairables#########
-face_data = 'C:/Users/bvspranav999/OneDrive/Desktop/Face Recognition Project/Real-time-face-recognition-Using-Facenet-main/Faces/'
+face_data = 'Faces/' ## add path to the faces folder
 required_shape = (160,160)
 face_encoder = InceptionResNetV2()
-path = 'C:/Users/bvspranav999/OneDrive/Desktop/Face Recognition Project/Real-time-face-recognition-Using-Facenet-main/facenet_keras_weights.h5'
+path = 'facenet_keras_weights.h5' ## add path of keras_weights.h5 file
 face_encoder.load_weights(path)
 face_detector = mtcnn.MTCNN()
 encodes = []
@@ -51,7 +51,7 @@ for face_names in os.listdir(face_data):
         encode = l2_normalizer.transform(np.expand_dims(encode, axis=0))[0]
         encoding_dict[face_names] = encode
     
-path = 'C:/Users/bvspranav999/OneDrive/Desktop/Face Recognition Project/Real-time-face-recognition-Using-Facenet-main/encodings.pkl'
+path = 'encodings.pkl' ## path of encodings.pkl file
 with open(path, 'wb') as file:
     pickle.dump(encoding_dict, file)
 
