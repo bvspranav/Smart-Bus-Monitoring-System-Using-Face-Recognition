@@ -13,17 +13,18 @@ Telegram Bot Integration: Provides real-time notifications and communication via
 
 To run this project, ensure you have the following prerequisites installed:
 
-Python 3.x
-OpenCV
-TensorFlow
-mtcnn
-NumPy
-SciPy
-Google API Python Client
-gspread
-Telepot
-oauth2client
-Openpyxl
+#### Python 3.x
+#### OpenCV
+#### TensorFlow
+#### mtcnn
+#### NumPy
+#### SciPy
+#### Google API Python Client
+#### gspread
+#### Telepot
+#### oauth2client
+#### Openpyxl
+
 
 ## Usage
 
